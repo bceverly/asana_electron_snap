@@ -1,0 +1,40 @@
+name: asana-electron
+title: Asana Desktop
+version: '1.0.1'
+summary: Electron wrapper for the Asana project management application
+description: |
+  Electron-based desktop application that wraps the Asana
+  (app.asana.com) web interface into a native desktop experience.
+license: GPL-3.0-only
+contact: https://github.com/bceverly/asana_electron_snap/issues
+issues: https://github.com/bceverly/asana_electron_snap/issues
+source-code: https://github.com/bceverly/asana_electron_snap
+website: https://asana.com
+
+icon: snap/gui/asana-electron.png
+
+base: core24
+grade: stable
+confinement: strict
+compression: lzo
+
+platforms:
+  amd64:
+    build-on: [amd64]
+    build-for: [amd64]
+
+apps:
+  asana-electron:
+    command: asana-electron --no-sandbox
+    extensions: [gnome]
+    common-id: com.asana.electron
+    plugs:
+      - network
+      - network-bind
+      - browser-support
+      - audio-playback
+
+parts:
+  asana-electron:
+    plugin: dump
+    source: dist/linux-unpacked

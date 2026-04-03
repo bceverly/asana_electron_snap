@@ -1,0 +1,32 @@
+{
+  "name": "asana-electron",
+  "version": "1.0.1",
+  "description": "Electron wrapper for the Asana project management application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --no-sandbox .",
+    "test": "mocha --timeout 10000"
+  },
+  "author": "Bryan Everly",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.0",
+    "mocha": "^11.0.0",
+    "chai": "^4.5.0"
+  },
+  "build": {
+    "appId": "com.asana.electron",
+    "productName": "asana-electron",
+    "linux": {
+      "target": [
+        {
+          "target": "dir",
+          "arch": ["x64"]
+        }
+      ],
+      "category": "Office",
+      "icon": "icon.png"
+    }
+  }
+}

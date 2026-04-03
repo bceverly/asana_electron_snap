@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Asana
+Comment=Electron wrapper for the Asana project management application
+Exec=asana-electron
+Icon=${SNAP}/meta/gui/asana-electron.png
+Type=Application
+Categories=Office;ProjectManagement;
+Terminal=false
+StartupWMClass=asana-electron
